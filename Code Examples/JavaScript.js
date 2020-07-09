@@ -24,7 +24,7 @@ async function getFromAPI(path) {
   const hmacBase64 = hmac.digest("base64");
 
   const headers = {
-    Date: timestamp,
+    DatetimeUtc: timestamp,
     "Content-MD5": contentMD5,
     "Content-Type": contentType,
     Authorization: `HMAC ${token.identifier}:${hmacBase64}`
